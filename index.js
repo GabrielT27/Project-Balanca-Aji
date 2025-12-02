@@ -7,13 +7,21 @@ const quantidadeInput = document.getElementById('quantidade');
 const resultado = document.getElementById('resultado');
 const botaoCalcular = document.getElementById('calcular');
 
+let total = 0;
+
 
 botaoCalcular.addEventListener('click', () => {
     const quantidade = parseInt(quantidadeInput.value);
     const tipoPallet = select.value;
 
+    if (isNaN(quantidade)) {
+        resultado.innerHTML(`Digite um número válido!`);
+        return;
+    }
 
-let total = 0;
+   
+
+
 
 
 switch(tipoPallet) {
@@ -35,5 +43,28 @@ switch(tipoPallet) {
 }
 
 
-    resultado.innerHTML = `Total: ${total} kg`;
+    resultado.innerHTML = `Peso de pallets: ${total} kg`;
+
+
+
+    })
+
+
+    const botaoCalcularTotal = document.getElementById('calcularTotal');
+    const pesoPesagemInput = document.getElementById('pesoPesagem')
+    const resultadoF = document.getElementById('resultadoF');
+
+
+    botaoCalcularTotal.addEventListener('click', () => {
+
+        const pesoPesagem = parseInt(pesoPesagemInput.value);
+        const pesoFinal = pesoPesagem + total;
+
+        if (isNaN(pesoPesagem)) {
+            resultadoF.innerHTML = (`Adicione um número válido!`);
+            return;
+        }
+
+        resultadoF.innerHTML = `Peso total da pesagem: ${pesoFinal}Kg`;
+
 });
