@@ -15,7 +15,7 @@ botaoCalcular.addEventListener('click', () => {
     const tipoPallet = select.value;
 
     if (isNaN(quantidade)) {
-        resultado.innerHTML(`Digite um número válido!`);
+        resultado.innerHTML = (`Digite um número válido!`);
         return;
     }
 
