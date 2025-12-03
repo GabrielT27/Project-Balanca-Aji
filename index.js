@@ -1,6 +1,7 @@
 const palletCHEP = (quantidadeCHEP) => quantidadeCHEP * 25;
-const palletPBR = (quantidadePBR) => quantidadePBR * 28;
-const palletIMPORTADO = (quantidadeIMPORTADO) => quantidadeIMPORTADO * 24;
+const palletPBR = (quantidadePBR) => quantidadePBR * 25;
+const palletIMPORTADO = (quantidadeIMPORTADO) => quantidadeIMPORTADO * 29;
+const palletMADEIRA = (quantidadeMADEIRA) => quantidadeMADEIRA * 25;
 
 const select = document.getElementById('tipoPallet');
 const quantidadeInput = document.getElementById('quantidade');
