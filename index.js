@@ -38,6 +38,10 @@ switch(tipoPallet) {
     total = palletIMPORTADO(quantidade);
     break;
 
+    case 'palletMADEIRA':
+    total = palletMADEIRA(quantidade);
+    break;
+
     default: 
     alert ('tipo inválido');
 
