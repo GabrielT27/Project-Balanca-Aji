@@ -1,8 +1,25 @@
 
-/* 1) Box-sizing global */
+
+/* 1) Box-sizing global
+   Este bloco define como a largura/altura dos elementos será calculada no layout.
+   Usamos 'border-box' para que width/height incluam conteúdo + padding + borda.
+*/
+
+/* Seleciona TODOS os elementos da página */
 *,
+/* Seleciona o pseudo-elemento ::before de TODOS os elementos */
 *::before,
+/* Seleciona o pseudo-elemento ::after de TODOS os elementos */
 *::after {
+  /* Define o modelo de caixa como 'border-box' globalmente.
+     Efeito: quando você usa width/height em um elemento,
+     o navegador considera dentro desse tamanho:
+       - o conteúdo,
+       - o padding,
+       - e a borda.
+     Isso evita que o elemento "cresça" além do tamanho esperado
+     quando você adiciona padding ou border.
+  */
   box-sizing: border-box;
 }
 
@@ -43,7 +60,7 @@ body {
 
 
 .container {
-    background: #e7e7e7;
+    background: #ebebeb;
     padding: 2rem; 
     border-radius: 2rem;
     max-width: 470px;
@@ -91,6 +108,7 @@ select {
     color: #e7e7e7;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor: pointer;
+    margin-top: 0.6rem;
 }
 
 
