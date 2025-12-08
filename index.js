@@ -70,6 +70,6 @@ switch(tipoPallet) {
             return;
         }
 
-        resultadoF.innerHTML = `Peso total da pesagem: ${pesoFinal}Kg`;
+        resultadoF.innerHTML = `Peso total da pesagem: ${pesoFinal} Kg`;
 
 });
