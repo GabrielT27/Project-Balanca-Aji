@@ -1,7 +1,7 @@
-const palletCHEP = (quantidadeCHEP) => quantidadeCHEP * 25;
+const palletCHEP = (quantidadeCHEP) => quantidadeCHEP * 29;
 const palletPBR = (quantidadePBR) => quantidadePBR * 25;
-const palletIMPORTADO = (quantidadeIMPORTADO) => quantidadeIMPORTADO * 29;
-const palletMADEIRA = (quantidadeMADEIRA) => quantidadeMADEIRA * 25;
+const palletIMPORTADO = (quantidadeIMPORTADO) => quantidadeIMPORTADO * 40;
+const palletDESCARTAVEL = (quantidadeDESCARTAVEL) => quantidadeDESCARTAVEL * 14;
 
 const select = document.getElementById('tipoPallet');
 const quantidadeInput = document.getElementById('quantidade');
@@ -38,8 +38,8 @@ switch(tipoPallet) {
     total = palletIMPORTADO(quantidade);
     break;
 
-    case 'palletMADEIRA':
-    total = palletMADEIRA(quantidade);
+    case 'palletDESCARTAVEL':
+    total = palletDESCARTAVEL(quantidade);
     break;
 
     default: 
